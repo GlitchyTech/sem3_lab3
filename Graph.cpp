@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include "Graph.hpp"
 
 Graph::Graph(int* arr, int n) {
@@ -16,9 +18,9 @@ Graph::Graph(int* arr, int n) {
 void Graph::print_matrix() {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            cout << graph->Get(j + i * n) << "  ";
+            std::cout << graph->Get(j + i * n) << "  ";
         }
-        cout << endl;
+        std::cout << std::endl;
     }
 }
 
@@ -54,7 +56,7 @@ Sequence<int>* Graph::find_path(Sequence<int>* past_vertexes_path,
 Sequence<int>* Graph::Dijkstra(int start_vertex, int end_vertex) {
     if (start_vertex < 0 || start_vertex >= n ||
         end_vertex < 0 || end_vertex >= n)
-        throw out_of_range(IndexOutOfRangeEx);
+        throw std::out_of_range(IndexOutOfRangeEx);
     // just check edges
 
     Sequence<int>* short_dist = new ArraySequence<int>(n);
@@ -105,7 +107,7 @@ Sequence<int>* Graph::Dijkstra(int start_vertex, int end_vertex) {
 
 Sequence<int>* Graph::Ranges(int start_vertex) {
     if (start_vertex < 0 || start_vertex >= n)
-        throw out_of_range(IndexOutOfRangeEx);
+        throw std::out_of_range(IndexOutOfRangeEx);
     // just check edges
 
     Sequence<int>* short_dist = new ArraySequence<int>(n);

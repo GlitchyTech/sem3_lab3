@@ -1,17 +1,11 @@
 #pragma once
 #include <stdexcept>
-#include <iostream>
-using namespace std;
 
 template <class T>
 class LinkedList {
-private:
-    int size;
-    struct node {
-        T items;
-        node* next;
-    };
-    node* head = new node;
+
+struct node
+
 public:
     LinkedList(T* items, int count) {
         this->size = count;
@@ -223,4 +217,13 @@ public:
             return newLIST;
         }
     }
+
+private:
+    int size;
+    struct node {
+        T items;
+        node* next;
+    };
+    node* head = new node;
+
 };

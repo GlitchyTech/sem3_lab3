@@ -1,5 +1,6 @@
 #pragma once
 #include "Graph.hpp"
+#include <iostream>
 #include <cassert>
 
 

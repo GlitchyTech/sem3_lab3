@@ -1,6 +1,7 @@
 #pragma once
+
+
 #include "ArraySequence.hpp"
-using namespace std;
 
 template <typename T>
 Sequence <T>* bubble_sort(Sequence <T>* seq, int (*cmp)(T, T)) {

@@ -1,12 +1,13 @@
 #pragma once
+
+
 #include "LinkedList.hpp"
 #include "Sequence.hpp"
 
 
 template <class T>
 class ListSequence : public Sequence <T> {
-private:
-    LinkedList <T>* list;
+
 public:
     ListSequence(T* items, int size) {
         this->list = new LinkedList<T>(items, size);
@@ -83,6 +84,8 @@ public:
         return Conclist;
     }
 
+private:
+    LinkedList <T>* list;
 
 };
 
